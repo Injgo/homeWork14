@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,9 +42,6 @@
                                     <color key="baseForegroundColor" systemColor="linkColor"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="wu5-li-NDs" kind="show" id="1ZX-ed-36t"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qf-Rq-RXA">
                                 <rect key="frame" x="30" y="622" width="354" height="43"/>
@@ -93,42 +91,52 @@
             <objects>
                 <viewController id="wu5-li-NDs" customClass="RegistrationViewController" customModule="homeWork13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gNc-Z7-0Dj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="backgorundImage" translatesAutoresizingMaskIntoConstraints="NO" id="eOz-zY-30d">
-                                <rect key="frame" x="0.0" y="114" width="414" height="259"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="279"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName:" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jqc-Gc-AWO">
-                                <rect key="frame" x="30" y="423" width="354" height="34"/>
+                                <rect key="frame" x="30" y="443" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z79-fM-TRS">
-                                <rect key="frame" x="360" y="85" width="24" height="14"/>
+                                <rect key="frame" x="300.5" y="68" width="93.5" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                                <buttonConfiguration key="configuration" style="plain" title="edit profile"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-tq-Z3m">
-                                <rect key="frame" x="30" y="487" width="354" height="34"/>
+                                <rect key="frame" x="30" y="507" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOP-jG-Udw">
-                                <rect key="frame" x="30" y="551" width="354" height="34"/>
+                                <rect key="frame" x="30" y="571" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qro-Da-kpl">
-                                <rect key="frame" x="30" y="615" width="354" height="34"/>
+                                <rect key="frame" x="30" y="635" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="location"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLU-RE-lN4">
-                                <rect key="frame" x="30" y="699" width="354" height="43"/>
+                                <rect key="frame" x="30" y="719" width="354" height="43"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save Changes" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1x5-ii-udN">
+                                <rect key="frame" x="327" y="327" width="77" height="56"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="pencil.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="35" scale="large"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
@@ -136,6 +144,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qro-Da-kpl" firstAttribute="top" secondItem="qOP-jG-Udw" secondAttribute="bottom" constant="30" id="2yg-x4-bmq"/>
+                            <constraint firstItem="Jqc-Gc-AWO" firstAttribute="top" secondItem="1x5-ii-udN" secondAttribute="bottom" constant="60" id="4Uv-RQ-3ib"/>
                             <constraint firstItem="xLU-RE-lN4" firstAttribute="leading" secondItem="s9w-tN-6yA" secondAttribute="leading" constant="30" id="575-I5-CXq"/>
                             <constraint firstItem="s9w-tN-6yA" firstAttribute="trailing" secondItem="G0u-tq-Z3m" secondAttribute="trailing" constant="30" id="6Bh-No-b7j"/>
                             <constraint firstItem="eOz-zY-30d" firstAttribute="top" secondItem="s9w-tN-6yA" secondAttribute="top" constant="70" id="BFj-1M-Mul"/>
@@ -151,10 +160,11 @@
                             <constraint firstItem="eOz-zY-30d" firstAttribute="top" secondItem="Z79-fM-TRS" secondAttribute="bottom" constant="15" id="WmN-QW-5TO"/>
                             <constraint firstItem="Jqc-Gc-AWO" firstAttribute="top" secondItem="eOz-zY-30d" secondAttribute="bottom" constant="50" id="YPW-Vi-7MS"/>
                             <constraint firstItem="G0u-tq-Z3m" firstAttribute="top" secondItem="Jqc-Gc-AWO" secondAttribute="bottom" constant="30" id="dZS-ml-JYL"/>
+                            <constraint firstItem="s9w-tN-6yA" firstAttribute="trailing" secondItem="1x5-ii-udN" secondAttribute="trailing" constant="10" id="hzG-bF-1zn"/>
                             <constraint firstItem="G0u-tq-Z3m" firstAttribute="leading" secondItem="s9w-tN-6yA" secondAttribute="leading" constant="30" id="j9f-kG-uwW"/>
                             <constraint firstItem="s9w-tN-6yA" firstAttribute="trailing" secondItem="eOz-zY-30d" secondAttribute="trailing" id="mV5-N4-wa6"/>
                             <constraint firstItem="s9w-tN-6yA" firstAttribute="trailing" secondItem="xLU-RE-lN4" secondAttribute="trailing" constant="30" id="rRQ-VP-NXK"/>
-                            <constraint firstItem="s9w-tN-6yA" firstAttribute="trailing" secondItem="Z79-fM-TRS" secondAttribute="trailing" constant="30" id="tKa-ak-XMk"/>
+                            <constraint firstItem="s9w-tN-6yA" firstAttribute="trailing" secondItem="Z79-fM-TRS" secondAttribute="trailing" constant="20" id="tKa-ak-XMk"/>
                             <constraint firstItem="xLU-RE-lN4" firstAttribute="top" secondItem="Qro-Da-kpl" secondAttribute="bottom" constant="50" id="uTR-x9-a4g"/>
                         </constraints>
                     </view>
@@ -174,6 +184,7 @@
     </scenes>
     <resources>
         <image name="backgorundImage" width="282" height="422"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
